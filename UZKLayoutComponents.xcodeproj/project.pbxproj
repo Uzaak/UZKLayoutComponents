@@ -21,6 +21,7 @@
 		97AD1C8F18AE6CC900239ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AD1C7118AE6CC800239ED7 /* UIKit.framework */; };
 		97AD1C9718AE6CC900239ED7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 97AD1C9518AE6CC900239ED7 /* InfoPlist.strings */; };
 		97AD1C9918AE6CC900239ED7 /* UZKLayoutComponentsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD1C9818AE6CC900239ED7 /* UZKLayoutComponentsTests.m */; };
+		97AD1CA518AE729700239ED7 /* UZKInputFieldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97AD1CA418AE729700239ED7 /* UZKInputFieldView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		97AD1C9418AE6CC900239ED7 /* UZKLayoutComponentsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UZKLayoutComponentsTests-Info.plist"; sourceTree = "<group>"; };
 		97AD1C9618AE6CC900239ED7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		97AD1C9818AE6CC900239ED7 /* UZKLayoutComponentsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UZKLayoutComponentsTests.m; sourceTree = "<group>"; };
+		97AD1CA318AE729700239ED7 /* UZKInputFieldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UZKInputFieldView.h; path = PodContent/UZKInputFieldView.h; sourceTree = SOURCE_ROOT; };
+		97AD1CA418AE729700239ED7 /* UZKInputFieldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UZKInputFieldView.m; path = PodContent/UZKInputFieldView.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,7 @@
 		97AD1C7318AE6CC800239ED7 /* UZKLayoutComponents */ = {
 			isa = PBXGroup;
 			children = (
+				97AD1CA218AE714A00239ED7 /* PodContent */,
 				97AD1C7C18AE6CC900239ED7 /* UZKAppDelegate.h */,
 				97AD1C7D18AE6CC900239ED7 /* UZKAppDelegate.m */,
 				97AD1C7F18AE6CC900239ED7 /* Main.storyboard */,
@@ -150,6 +154,15 @@
 				97AD1C9518AE6CC900239ED7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		97AD1CA218AE714A00239ED7 /* PodContent */ = {
+			isa = PBXGroup;
+			children = (
+				97AD1CA318AE729700239ED7 /* UZKInputFieldView.h */,
+				97AD1CA418AE729700239ED7 /* UZKInputFieldView.m */,
+			);
+			name = PodContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 				97AD1C8418AE6CC900239ED7 /* UZKViewController.m in Sources */,
 				97AD1C7A18AE6CC800239ED7 /* main.m in Sources */,
 				97AD1C7E18AE6CC900239ED7 /* UZKAppDelegate.m in Sources */,
+				97AD1CA518AE729700239ED7 /* UZKInputFieldView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

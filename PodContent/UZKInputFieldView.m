@@ -62,14 +62,16 @@
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    //textfield vazio? sobe o label
     [self sobeOLabel];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     //textfield vazio? desce o label
-    [self desceOLabel];
+    if ( [self.textField.text length] == 0 )
+    {
+        [self desceOLabel];
+    }
 }
 
 

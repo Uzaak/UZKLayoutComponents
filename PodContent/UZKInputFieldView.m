@@ -32,6 +32,12 @@
     [self resetLabels];
 }
 
+- (void)setTextField:(UITextField *)textField
+{
+    _textField = textField;
+    _textField.delegate = self;
+}
+
 
 #pragma mark - Label Mechanics
 

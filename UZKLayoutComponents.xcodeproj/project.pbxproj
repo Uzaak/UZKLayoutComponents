@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		975BB26218B153D000E398CF /* UZKPickerButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 975BB26118B153D000E398CF /* UZKPickerButtonView.m */; };
 		97AD1C6E18AE6CC800239ED7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AD1C6D18AE6CC800239ED7 /* Foundation.framework */; };
 		97AD1C7018AE6CC800239ED7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AD1C6F18AE6CC800239ED7 /* CoreGraphics.framework */; };
 		97AD1C7218AE6CC800239ED7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97AD1C7118AE6CC800239ED7 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		975BB26018B153D000E398CF /* UZKPickerButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UZKPickerButtonView.h; path = PodContent/UZKPickerButtonView.h; sourceTree = SOURCE_ROOT; };
+		975BB26118B153D000E398CF /* UZKPickerButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UZKPickerButtonView.m; path = PodContent/UZKPickerButtonView.m; sourceTree = SOURCE_ROOT; };
 		97AD1C6A18AE6CC800239ED7 /* UZKLayoutComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UZKLayoutComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AD1C6D18AE6CC800239ED7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		97AD1C6F18AE6CC800239ED7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,6 +164,8 @@
 			children = (
 				97AD1CA318AE729700239ED7 /* UZKInputFieldView.h */,
 				97AD1CA418AE729700239ED7 /* UZKInputFieldView.m */,
+				975BB26018B153D000E398CF /* UZKPickerButtonView.h */,
+				975BB26118B153D000E398CF /* UZKPickerButtonView.m */,
 			);
 			name = PodContent;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975BB26218B153D000E398CF /* UZKPickerButtonView.m in Sources */,
 				97AD1C8418AE6CC900239ED7 /* UZKViewController.m in Sources */,
 				97AD1C7A18AE6CC800239ED7 /* main.m in Sources */,
 				97AD1C7E18AE6CC900239ED7 /* UZKAppDelegate.m in Sources */,
@@ -475,6 +481,7 @@
 				97AD1C9E18AE6CC900239ED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97AD1C9F18AE6CC900239ED7 /* Build configuration list for PBXNativeTarget "UZKLayoutComponentsTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				97AD1CA118AE6CC900239ED7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

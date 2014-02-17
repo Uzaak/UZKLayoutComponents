@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UZKPickerButtonView.h"
+
 @interface UZKViewController : UIViewController
+
+@property (nonatomic, strong) IBOutlet UZKPickerButtonView * pbv;
 
 @end

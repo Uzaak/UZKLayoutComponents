@@ -15,7 +15,6 @@
 
 @property (nonatomic, strong) IBOutlet UITextField * textField;
 
-
 @end
 
 @implementation UZKInputFieldView

@@ -16,4 +16,8 @@
 @property (nonatomic) int fontSize;
 @property (nonatomic) float selectionDelay;
 
+@property (nonatomic, strong) id defaultValue;
+
+@property (nonatomic, strong) void (^didSelectRowBlock)(id selectedItem);
+
 @end

@@ -67,11 +67,6 @@
     return [self.data count];
 }
 
-/*- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    return [[self.data objectAtIndex:row] description];
-}*/
-
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
     UILabel * label = (UILabel *)view;
@@ -106,6 +101,11 @@
                                                 selector:@selector(dismissPicker)
                                                 userInfo:nil
                                                  repeats:NO];
+    
+    if ( self.didSelectRowBlock )
+    {
+        self.didSelectRowBlock(self.selectedObject);
+    }
 }
 
 #pragma mark - Showing Picker Magicks
@@ -140,5 +140,19 @@
     [self.picker removeFromSuperview];
     self.button.alpha = 1;
 }
+
+
+#pragma mark - Getters should Get
+
+- (id)selectedObject
+{
+    if ( ! _selectedObject )
+    {
+        return _defaultValue;
+    }
+    
+    return _selectedObject;
+}
+
 
 @end

@@ -28,6 +28,9 @@
     if ( self )
     {
         self.picker = [[UIPickerView alloc] init];
+        
+        self.fontSize = 17;
+        self.selectionDelay = 1.0f;
     }
     
     return self;
@@ -64,9 +67,25 @@
     return [self.data count];
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+/*- (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
     return [[self.data objectAtIndex:row] description];
+}*/
+
+- (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
+{
+    UILabel * label = (UILabel *)view;
+    
+    if ( ! label )
+    {
+        label = [[UILabel alloc] init];
+        label.font = [UIFont systemFontOfSize:self.fontSize];
+        label.textAlignment = NSTextAlignmentCenter;
+    }
+    
+    label.text = [[self.data objectAtIndex:row] description];
+    
+    return label;
 }
 
 #pragma mark - Picker Delegate
@@ -82,7 +101,7 @@
         self.timer = nil;
     }
     
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.selectionDelay
                                                   target:self
                                                 selector:@selector(dismissPicker)
                                                 userInfo:nil

@@ -13,4 +13,7 @@
 @property (nonatomic, strong) NSArray * data;
 @property (nonatomic, readonly) id selectedObject;
 
+@property (nonatomic) int fontSize;
+@property (nonatomic) float selectionDelay;
+
 @end

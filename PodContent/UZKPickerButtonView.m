@@ -90,17 +90,7 @@
     self.selectedObject = [self.data objectAtIndex:row];
     [self.button setTitle:[self.selectedObject description] forState:UIControlStateNormal];
     
-    if (self.timer)
-    {
-        [self.timer invalidate];
-        self.timer = nil;
-    }
-    
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.selectionDelay
-                                                  target:self
-                                                selector:@selector(dismissPicker)
-                                                userInfo:nil
-                                                 repeats:NO];
+    [self countdownToDoom];
     
     if ( self.didSelectRowBlock )
     {
@@ -132,6 +122,8 @@
     
     [self addSubview:self.picker];
     [self.picker becomeFirstResponder];
+    
+    [self countdownToDoom];
 }
 
 - (void)dismissPicker
@@ -139,6 +131,21 @@
     [self.picker resignFirstResponder];
     [self.picker removeFromSuperview];
     self.button.alpha = 1;
+}
+
+- (void)countdownToDoom
+{
+    if (self.timer)
+    {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:self.selectionDelay
+                                                  target:self
+                                                selector:@selector(dismissPicker)
+                                                userInfo:nil
+                                                 repeats:NO];
 }
 
 

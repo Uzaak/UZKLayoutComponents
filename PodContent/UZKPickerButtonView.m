@@ -87,6 +87,11 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+    if ( ! self.selectedObject )
+    {
+        [self pickerView:self.picker didSelectRow:0 inComponent:0];
+    }
+    
     self.selectedObject = [self.data objectAtIndex:row];
     [self.button setTitle:[self.selectedObject description] forState:UIControlStateNormal];
     

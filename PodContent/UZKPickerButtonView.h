@@ -20,4 +20,6 @@
 
 @property (nonatomic, strong) void (^didSelectRowBlock)(id selectedItem);
 
+- (void)resetSelection;
+
 @end

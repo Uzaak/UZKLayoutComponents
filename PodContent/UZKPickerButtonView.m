@@ -10,6 +10,8 @@
 
 @interface UZKPickerButtonView ()
 
+@property (nonatomic, strong) NSString * defaultButtonText;
+
 @property (nonatomic, strong) IBOutlet UIButton * button;
 @property (nonatomic, strong) UIPickerView * picker;
 
@@ -46,6 +48,8 @@
 {
     _button = button;
     [_button addTarget:self action:@selector(showPicker) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.defaultButtonText = [self.button titleForState:UIControlStateNormal];
 }
 
 - (void)setPicker:(UIPickerView *)picker
@@ -88,6 +92,7 @@
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.selectedObject = [self.data objectAtIndex:row];
+    
     [self.button setTitle:[self.selectedObject description] forState:UIControlStateNormal];
     
     [self countdownToDoom];
@@ -151,6 +156,16 @@
                                                 selector:@selector(dismissPicker)
                                                 userInfo:nil
                                                  repeats:NO];
+}
+
+
+#pragma mark - And to dust you shall return
+
+- (void)resetSelection
+{
+    [self dismissPicker];
+    self.selectedObject = nil;
+    [self.button setTitle:self.defaultButtonText forState:UIControlStateNormal];
 }
 
 

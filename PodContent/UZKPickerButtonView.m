@@ -166,6 +166,7 @@
     [self dismissPicker];
     self.selectedObject = nil;
     [self.button setTitle:self.defaultButtonText forState:UIControlStateNormal];
+    [self.picker selectRow:0 inComponent:0 animated:NO];
 }
 
 

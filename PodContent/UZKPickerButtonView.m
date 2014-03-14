@@ -15,8 +15,6 @@
 @property (nonatomic, strong) IBOutlet UIButton * button;
 @property (nonatomic, strong) UIPickerView * picker;
 
-@property (nonatomic, strong) id selectedObject;
-
 @property (nonatomic, strong) NSTimer *timer;
 
 @end

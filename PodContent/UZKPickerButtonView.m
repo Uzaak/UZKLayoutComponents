@@ -23,6 +23,9 @@
 
 @implementation UZKPickerButtonView
 
+@synthesize selectedObject = _selectedObject;
+// ...or else the compiler goes nuts.
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
@@ -180,6 +183,32 @@
     }
     
     return _selectedObject;
+}
+
+
+#pragma mark - Setters should Set
+
+- (void)setSelectedObject:(id)selectedObject
+{
+    _selectedObject = selectedObject;
+    
+    if ( ! selectedObject )
+    {
+        return;
+    }
+    
+    [self.button setTitle:[selectedObject description] forState:UIControlStateNormal];
+    
+    for ( int x = 0 ; x < [self.data count] ; x++ )
+    {
+        if ( [[self.data description] isEqualToString:[selectedObject description]] )
+        {
+            [self.picker selectRow:x inComponent:0 animated:NO];
+            return;
+        }
+    }
+    
+    NSLog(@"Warning: you're setting a selectedObject which does not match any of the objects your picker has. This means once the user taps the button, you'll lose the selected object forever - or at least until you programmatically add it again. This might become an error in the future. Hell, this might even become an error in the present. You should really fix that.");
 }
 
 

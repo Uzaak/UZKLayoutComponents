@@ -8,4 +8,5 @@ Pod::Spec.new do |s|
   s.source_files = 'PodContent/*.{h,m}'
   s.resources = 'PodContent/*.xib'
   s.requires_arc = true
+  s.homepage = 'http://www.google.com'
 end
